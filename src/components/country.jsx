@@ -23,7 +23,7 @@ export default class Country extends Component {
                     <div className="card-footer text-muted">
                         <h3 className="card-title" style={{ textDecoration: "underline" }}>{this.state.country.name}</h3>
                         <img src={country.flag} style={{ "width": "300px" }} className="card-img-top" alt="..."></img>
-                        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p className="card-text"></p>
                         <table className="table table-bordered border-info">
                             <tbody>
                                 <tr className="table-info table-primary">

@@ -9,10 +9,11 @@ export default class CountryList extends Component {
     state = {
         countries: []
     }
+    
     componentDidMount() {
         axios.get("https://restcountries.eu/rest/v2/all")
             .then(resp => {
-                this.setState({ countries: resp.data.slice(0, 20) });
+                this.setState({ countries: resp.data });
             })
     }
 
@@ -28,12 +29,12 @@ export default class CountryList extends Component {
         const countrys = this.state.countries.map((country, idx) => {
             return (
                 <div className="col" key={country.numericCode}>
-                    <div class="card border-gray h-100 p-1">
+                    <div className="card border-gray h-100 p-1">
                         <Link to={country.name}><div className="card-header"><b>{country.name}</b></div></Link>
                         <img src={country.flag} className="card-img-top" alt={country.flag} />
                         <div className="card-body">
                             <h6 className="card-title">{country.nativeName}</h6>
-                            <p class="card-text">Some Stuff.</p>
+                            <p className="card-text">a country in {country.subregion}</p>
                         </div>
                     </div>
                 </div>

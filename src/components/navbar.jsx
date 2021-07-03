@@ -5,22 +5,14 @@ export default class Navbar extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-between">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">[ Country App ]</Link>
-                        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav left">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/about">Hakkımd</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">İletişim</Link>
+                                    <Link className="nav-link" to="/about">About</Link>
                                 </li>
                             </ul>
-                        </div>
                     </div>
                 </nav>
             </div>
