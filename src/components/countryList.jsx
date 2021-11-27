@@ -11,7 +11,7 @@ export default class CountryList extends Component {
     }
     
     componentDidMount() {
-        axios.get("https://restcountries.eu/rest/v2/all")
+        axios.get("http://api.countrylayer.com/v2/all?access_key=f932e936c19e4cc20e12b739a2fcb03e")
             .then(resp => {
                 this.setState({ countries: resp.data });
             })
