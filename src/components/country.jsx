@@ -9,7 +9,7 @@ export default class Country extends Component {
 
     componentDidMount() {
         const countryName = this.props.match.params.name;
-        axios.get('https://restcountries.eu/rest/v2/name/' + countryName + '?fullText=true')
+        axios.get('http://restcountries.eu/v2/name/' + countryName + '?fullText=true&access_key=f932e936c19e4cc20e12b739a2fcb03e')
             .then(resp => {
                 this.setState({ country: resp.data[0] })
             })
